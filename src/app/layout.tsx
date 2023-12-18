@@ -1,9 +1,11 @@
+// components/RootLayout.tsx
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 import './globals.css'
+import HeaderTemplet from './headbodytemplet/page'
+import Footer from './footer/page'
 import Header from './headbody/page'
 import HeadBoady from './homebody/page'
-import Footer from './footer/page'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -19,7 +21,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}><Header/><HeadBoady/>{children}<Footer/></body>
+      <head>
+      </head>
+      <body className={inter.className}> <Header/><HeadBoady/>
+          {children}
+          <Footer/>
+      </body>
     </html>
   )
 }

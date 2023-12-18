@@ -6,7 +6,7 @@ import Image from 'next/image';
 import Login from "../login/page"; // Import the Login component
 import { ProfileData } from "../loginprofile/profilecom";
 
-export default function Header() {
+export default function HeaderTemplet() {
   const [showLoginPopup, setShowLoginPopup] = useState(false);
 
   const handleLoginButtonClick = () => {
@@ -14,8 +14,8 @@ export default function Header() {
   };
 
   return (
-    <div className="outercontainer">
-      <div className="button-container">
+  
+      <div className="button-containertemplet">
         <Image src="/logo4.png"  className="logo" height="200" width="200" alt="Logo " />
         <div className="nav-buttons">
           <Link href="/toprecipes" className="nav-button">Home</Link>
@@ -26,14 +26,10 @@ export default function Header() {
         <button className="login-button" onClick={handleLoginButtonClick}>
           <Image src="/login 3.png" alt="Login" width="50" height="30" />
         </button>
-      </div>
-
-      {/* Conditionally render the login popup */}
+          {/* Conditionally render the login popup */}
       {showLoginPopup && <Login setShowPopup={setShowLoginPopup} setProfileData={function (value: React.SetStateAction<ProfileData | null>): void {
         throw new Error("Function not implemented.");
       } } />}
-   
-      <Image className="image"   height="950" width="950" src="/dark1.jpg" alt="" />
-    </div>
+      </div>
   );
 };

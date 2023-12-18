@@ -3,6 +3,9 @@
 @tailwind utilities;
 
 /* Add this CSS at the end of your CSS file */
+.background{
+  background-color: black;
+}
 .outercontainer {
   position: relative;
   margin-top: 0px; /* Adjust this margin as needed */
@@ -17,12 +20,15 @@
 .button-container {
   position: absolute;
   top: 50px;
-  left: 0;
-  width: 100%;
+  left: 60px;
+  right: 50px;
+  width: 90%;
   background-color: white; /* White background with some transparency */
   display: flex;
   justify-content: space-around;
   padding: 10px;
+  border-radius: 80px; /* Adjust the value as needed for the desired roundness */
+  box-shadow: inset 0 0 10px rgba(93, 97, 100, 0.3);
 }
 
 .nav-button {
@@ -43,6 +49,8 @@
 .image {
   width: 100%;
   height: 100%;
+  border-radius: 10px; /* Adjust the value as needed for the desired roundness */
+  box-shadow: 0 4px 8px rgba(66, 60, 60, 0.2); /* Adjust the values for the shadow effect */
 }
 .logo {
   width: 20%; /* Adjust the logo size as needed */
@@ -70,7 +78,7 @@
   position: absolute;
   top: 200px;
   margin-left: 990px;
-  right: 20;
+  right: 180px;
   width: 20%; /* Adjust the width as needed */
   height: 65%;
   background-color: white;
@@ -81,7 +89,7 @@
 .left-div {
   position: absolute;
   top: 200px;
-  left: 80px; /* Changed "margin-left" to "left" */
+  left: 120px; /* Changed "margin-left" to "left" */
   right: 20;
   width: 55%; /* Adjust the width as needed */
   height: 65%; /* Adjust the height as needed */
@@ -309,6 +317,7 @@
 .recipe-image img {
   width: 300px;
   height: 300px;
+  margin-left: 80px;
   transition: transform 0.5s ease-in-out;
   border: 8px solid rgb(248, 247, 247); /* Add a black border */
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.8); /* Add shadow effect on all sides */
@@ -335,22 +344,32 @@
 }
 
 .read-more-button {
-  background-color: #333;
-  color: white;
+  color: rgb(32, 30, 30);
   padding: 8px 16px;
   border: none;
+  font-size: 20px;
   cursor: pointer;
   border: 3px double rgb(158, 146, 146);
+  transition: background-color 0.3s ease; /* Add a smooth transition effect */
+}
+
+.read-more-button:active,
+.read-more-button:focus {
+  background-color: transparent;
+  outline: none; /* Remove the default focus outline if desired */
 }
 
 .recipe-details {
   padding: 10px;
   margin-top: 10px;
+  margin-right: 70px;
+
 }
 
 .recipe-details p {
   margin: 0;
   color: #0c0101;
+
 }
 
 .recipe-details.active {
@@ -505,7 +524,8 @@
   text-align: center;
   display:flex;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 90px;
+  margin-bottom: 60px;
 }
 
 select {
@@ -632,16 +652,43 @@ select:hover {
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a box shadow */
   border-radius: 20px;
 }
+/*Download page.css*/
+.downloadpage {
+  padding:20px;
+  text-align: center;
+  background-color: white;
+  color: black;
+  font-size: 16px;
+  margin : 30px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2); /* Add a box shadow */
+  border-radius: 20px;
+}
+.downloadpage button {
+  background: linear-gradient(45deg, white, rgb(253, 211, 218), rgb(180, 241, 228)); /* Add a gradient background */
+  border: 2px solid blueviolet; 
+  color: black;
+  border-radius: 10px; 
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.downloadpage button:hover {
+  background: linear-gradient(45deg,rgb(58, 229, 241), pink, white); /* Change gradient on hover */
+}
 /* styles/Home.module.css */
 .containerItem {
   display: grid;
   flex-wrap: wrap;
+  background-color: white;
   justify-content: space-around;
   margin: 20px;
-  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr)); /* Adjust the minmax values as needed */
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
   gap: 20px;
-  
+  border: 1px solid #ddd; /* Add a border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+  border-radius: 8px; /* Add border radius for rounded corners */
 }
+
 
 .columnItem {
   flex: 3;
@@ -652,12 +699,26 @@ select:hover {
   border: 1px solid #ccc;
   padding: 10px;
   text-align: center;
+  border: 1px solid #ddd; /* Add a border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+  border-radius: 8px;
 }
-
+.itemItem button{
+  background: linear-gradient(45deg, white, rgb(253, 211, 218), rgb(180, 241, 228)); /* Add a gradient background */
+  border: 2px solid blueviolet; 
+  color: black;
+  border-radius: 10px; 
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.itemItem button:hover {
+  background: linear-gradient(45deg,rgb(58, 229, 241), pink, white); /* Change gradient on hover */
+}
 .itemItem img {
-  max-width: 20%; /* Adjusted to use full width of the container */
+  max-width: 40%; /* Adjusted to use full width of the container */
   height: auto;
-  border-radius: 5px; /* Add border-radius for rounded corners if desired */
+  border-radius:20px; /* Add border-radius for rounded corners if desired */
 }
 
 .nextRow {
@@ -669,10 +730,13 @@ select:hover {
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.5);
+  background: white;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items:center;
+  border: 1px solid #ddd; /* Add a border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+  border-radius: 8px;
 }
 
 .popupfood-content {
@@ -680,33 +744,61 @@ select:hover {
   padding: 20px;
   border-radius: 5px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  text-align: center;
   position: relative;
-  max-width: 60%; /* Adjust as needed for the fixed size */
+  height: 80%;
+  width: 50%;
 }
 
+
 .popupfood-content img {
-  max-width: 30%; /* Adjust as needed */
-  height: auto;
+  width: 500px; /* Adjust as needed */
+  height: 500px;
   border-radius: 5px;
   z-index: 1;
 }
 
 .popupfood-content p {
   white-space: wrap; /* Prevent line breaks */
-  overflow: hidden; /* Hide overflow */
+  overflow:visible; /* Hide overflow */
   text-overflow: ellipsis; /* Show ellipsis for overflow */
 }
 
 .popupfood-content h2 {
   position: absolute;
-  top: 30%;
-  left: 60%;
+  top: 20%;
+  left: 79%;
+  margin-bottom: 30px;
+  transform: translate(-50%, -50%);
+  color: rgb(187, 33, 33);
+  font-size: 45px;
+}
+
+.popupfood-content h3 {
+  position: absolute;
+  top: 35%;
+  left: 75%;
   transform: translate(-50%, -50%);
   color: rgb(187, 33, 33);
   font-size: 24px;
 }
 
+.popupfood-content button {
+  position: absolute;
+  top: 48%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  background: linear-gradient(45deg, white, rgb(253, 211, 218), rgb(180, 241, 228)); /* Add a gradient background */
+  border: 2px solid blueviolet; 
+  color: black;
+  border-radius: 10px; 
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.popupfood-content button:hover {
+  background: linear-gradient(45deg,rgb(58, 229, 241), pink, white); /* Change gradient on hover */
+}
 .closepopupfood {
   position: absolute;
   top: 10px;
@@ -715,4 +807,322 @@ select:hover {
   cursor: pointer;
   color: rgb(206, 14, 14);
   z-index: 3;
+}
+/* styles/Doctor.module.css */
+.doctor-containerItem {
+  display: grid;
+  flex-wrap: wrap;
+  background-color: white;
+  justify-content: space-around;
+  margin: 20px;
+  grid-template-columns: repeat(auto-fill, minmax(400px, 1fr));
+  gap: 20px;
+  border: 1px solid #ddd; /* Add a border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+  border-radius: 8px; /* Add border radius for rounded corners */
+}
+
+
+.doctor-columnItem {
+  flex: 3;
+  margin: 10px;
+}
+
+.doctor-itemItem {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  border: 1px solid #ddd; /* Add a border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+  border-radius: 8px;
+}
+.doctor-itemItem button{
+  background: linear-gradient(45deg, white, rgb(253, 211, 218), rgb(180, 241, 228)); /* Add a gradient background */
+  border: 2px solid blueviolet; 
+  color: black;
+  border-radius: 10px; 
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.doctor-itemItem button:hover {
+  background: linear-gradient(45deg,rgb(58, 229, 241), pink, white); /* Change gradient on hover */
+}
+.doctor-itemItem img {
+  max-width: 40%; /* Adjusted to use full width of the container */
+  height: auto;
+  border-radius:20px; /* Add border-radius for rounded corners if desired */
+}
+
+.nextRow {
+  flex-basis: 20%;
+}
+.doctor-popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: white;
+  display: flex;
+  justify-content: center;
+  align-items:center;
+  border: 1px solid #ddd; /* Add a border */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a box shadow */
+  border-radius: 8px;
+}
+
+.doctor-popup-content {
+  background: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  position: relative;
+  height: 90%;
+  width: 70%;
+}
+
+
+.doctor-popup-content img {
+  width: 500px; /* Adjust as needed */
+  height: 500px;
+  border-radius: 5px;
+  z-index: 1;
+}
+
+.doctor-popup-content p {
+  white-space: wrap; /* Prevent line breaks */
+  overflow:visible; /* Hide overflow */
+  text-overflow: ellipsis; /* Show ellipsis for overflow */
+}
+
+.doctor-popup-content h2 {
+  position: absolute;
+  top: 20%;
+  left: 75%;
+  margin-bottom: 30px;
+  transform: translate(-50%, -50%);
+  color: rgb(187, 33, 33);
+  font-size: 40px;
+}
+
+.doctor-popup-content h3 {
+  position: absolute;
+  top: 35%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  color: rgb(187, 33, 33);
+  font-size: 24px;
+}
+
+.doctor-popup-content button {
+  position: absolute;
+  top: 48%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  font-size: 24px;
+  background: linear-gradient(45deg, white, rgb(253, 211, 218), rgb(180, 241, 228)); /* Add a gradient background */
+  border: 2px solid blueviolet; 
+  color: black;
+  border-radius: 10px; 
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-bottom: 20px;
+}
+.doctor-popup-content button:hover {
+  background: linear-gradient(45deg,rgb(58, 229, 241), pink, white); /* Change gradient on hover */
+}
+.doctor-closepopup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 60px;
+  cursor: pointer;
+  color: rgb(206, 14, 14);
+  z-index: 3;
+}
+/* styles.css */
+
+.profilepopup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.profilepopup-content {
+  display: flex;
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 700px;
+  max-width: 100vw;
+  height: 400px;
+  position: relative;
+  overflow-x: hidden;
+}
+
+.left-half {
+  flex: 1;
+  padding: 20px;
+  position: relative;
+  width: 50%;
+  text-align: center;
+  
+}
+
+.right-half {
+  flex: 1;
+  padding: 20px;
+  background-color: #09ac78; /* Green background color */
+  color: white;
+  border-radius: 8px;
+}
+
+.profilepopup input {
+  margin: 10px 0px;
+  border: none;
+  padding: 15px;
+  background-color: #efefef;
+  border-radius: 5px;
+  font-size: medium;
+}
+
+
+.profilepopup button {
+  border: none;
+  padding: 15px;
+  margin-top: 5px;
+  background-color: #059669;
+  border-radius: 5px;
+  color: #fff;
+  cursor: pointer;
+  font-size: 18px;
+}
+.profilepopup button:hover {
+  outline: none;
+  background-color: #24a57c;
+}
+
+.profilepopup h2 {
+  margin-top: 20px;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  font-size: 2rem;
+  margin: 10px 0px;
+}
+
+.profilepopup p {
+  box-sizing: border-box;
+  font-size: 1rem;
+  margin: 10px 0px;
+  padding-top: 20px;
+}
+
+.closeprofilepopup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 60px; /* Adjust the font size as needed */
+  cursor: pointer;
+  color: rgb(245, 234, 234);
+  background-color: red;
+  border: none;
+  border-radius: 10%; /* Use border-radius to create a rounded shape */
+  padding: 2px; /* Adjust padding as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+/* Add this to your styles.css or create a new CSS file */
+
+.profiledeatailpopup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1;
+}
+
+.profiledeatilpopup-content {
+  background-color: #fefefe;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.closeprofiledeatilpopup {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  font-size: 60px;
+  cursor: pointer;
+  color: #a51313; /* Adjust the color as needed */
+}
+
+.profiledeatilpopup h2 {
+  margin-bottom: 20px;
+}
+
+.profiledeatilpopup p {
+  margin-bottom: 15px;
+}
+
+.profiledeatilpopup ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.profiledeatilpopup li {
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.settings-popup {
+  flex: 1;
+  padding: 20px;
+  background-color: #09ac78; /* Green background color */
+  color: white;
+  border-radius: 8px;
+}
+.settings-popup input {
+  margin: 20px;
+  border: none;
+}
+.settings-button{
+  height: 20px;
+  width: 20px;
+
+}
+
+.outercontainertemplet{
+  
+  margin-top: 0px; /* Adjust this margin as needed */
+  display: flex;
+  align-items: center;
+  width: auto;
+}
+.button-containertemplet{
+  position: absolute;
+  top: 50px;
+  left: 60px;
+  right: 50px;
+  width: 90%;
+  background-color: white; /* White background with some transparency */
+  display: flex;
+  justify-content: space-around;
+  padding: 10px;
+  border-radius: 80px; /* Adjust the value as needed for the desired roundness */
+  box-shadow: inset 0 0 10px rgba(93, 97, 100, 0.3);
 }
