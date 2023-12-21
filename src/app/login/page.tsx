@@ -32,7 +32,9 @@ const Login: React.FC<LoginProps> = ({ setShowPopup, setProfileData }) => {
     <div className="profilepopup">
       <div className="profilepopup-content">
         {loggedIn ? (
-          <ProfilePopup username={username} setShowPopup={setShowPopup} password={''} />
+          <ProfilePopup username={username} setShowPopup={setShowPopup} password={''} setProfileData={function (value: React.SetStateAction<string | ProfileData>): void {
+            throw new Error('Function not implemented.');
+          } } />
         ) : (
           <>
             <div className="left-half">
