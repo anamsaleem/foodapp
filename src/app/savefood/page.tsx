@@ -11,6 +11,7 @@ const items = [
     price: 19.99,
     description: "Description for Item 1 ",
   },
+  
   {
     name: "Fruit Smoothies",
     image: "/smoothies.jpg", // Replace with the actual image path
@@ -57,6 +58,7 @@ const SaveHomeItem = () => {
   };
   return (
     <div className="containerItem">
+      <h1>Select Our  Menu</h1>
       {items.map((item, index) => (
         <div key={index} className="columnItem">
           <Item {...item} onSelect={() => handleSelect(item)} />

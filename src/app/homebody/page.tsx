@@ -10,8 +10,8 @@ export default function HeadBoady() {
           <div className="services-container">
               <h2 className="services-title">Services</h2>
               <div className="button-group">
-                  <Link href="#" className="service-button">Food</Link>
-                  <Link href="/recipeshare" className="service-button">Recipe Share</Link>
+                  <Link href="" className="service-button">Food</Link>
+                  <Link href="/recipeNote" className="service-button">Recipe Note</Link>
                   <Link href="/savefood" className="service-button">Online Marketplace</Link>
                     <Link href="/nutritionCalculator" className="service-button">Nutrirnt App</Link>
                   <Link href="#" className="service-button">Restaurant Directory</Link>

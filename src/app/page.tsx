@@ -7,13 +7,17 @@ import Recipe from './toprecipes/page';
 import HeaderTemplet from './headbodytemplet/page';
 import ProfilePopup from './loginprofile/page';
 import DietCalculator from './nutritionCalculator/page';
+import HomeCard from './homeCard/page';
 
 export default function Home() {
   return (
     <>
 
     <HeadBoady/>
+    <HomeCard/>
     <Recipe/>
+   
+
     
     
    </>
