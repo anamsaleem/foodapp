@@ -37,8 +37,10 @@ const IndexPage: React.FC = () => {
         <ProfilePopup
           username={profileData.username}
           setShowPopup={setShowProfilePopup}
-          password={''}  // Assuming you have a password value here
-          setProfileData={setProfileData}
+          password={''} // Assuming you have a password value here
+          setProfileData={function (value: React.SetStateAction<string | ProfileData>): void {
+            throw new Error('Function not implemented.');
+          } }      
         />
       )}
     </div>

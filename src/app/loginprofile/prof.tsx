@@ -1,6 +1,7 @@
 // components/Profile.tsx
 import React, { useState } from 'react';
 import ProfilePopup from './page';
+import { ProfileData } from './profilecom';
 
 interface ProfileProps {
   profileData: {
@@ -26,8 +27,9 @@ const Profile: React.FC<ProfileProps> = ({ profileData, setProfileData }) => {
         <ProfilePopup
           username={profileData.username}
           password={profileData.password}
-          setShowPopup={setShowPopup}
-          setProfileData={setProfileData}
+          setShowPopup={setShowPopup} setProfileData={function (value: React.SetStateAction<string | ProfileData>): void {
+            throw new Error('Function not implemented.');
+          } }          
         />
       )}
 
