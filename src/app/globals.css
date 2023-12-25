@@ -292,7 +292,7 @@ body{
   flex-direction: column;
   align-items: center;
   margin: 0px;
-  background-color: antiquewhite;
+  background-color: hsl(80, 60%, 97%);
   text-align: center; /* Center the content horizontally */
 }
 .recipe-content {
@@ -1289,4 +1289,52 @@ iframe {
   height: 169px;
   border: none; /* Remove iframe border */
   border-radius: 10px; /* Match the border-radius of the container */
+}
+
+
+/* styles/GalleryComponent.module.css */
+/* Add this to your existing CSS or create a new file, e.g., styles/GalleryComponent.module.css */
+.gallery-component {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 20px;
+}
+.gallerycontainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.image-container {
+  margin: 10px;
+  overflow: hidden;
+  border-radius: 10%;
+}
+
+.image-container img{
+  height: 300px;
+  width: 300px;
+}
+
+.rounded-image {
+  border-radius: 10%;
+}
+.gallery-title {
+  margin-top: 16px;
+}
+
+.gallery-next-button {
+  margin-top: 16px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.gallery-next-button img {
+height: 24px;
+width: 24px;
 }

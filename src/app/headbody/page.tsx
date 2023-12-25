@@ -18,10 +18,10 @@ export default function Header() {
       <div className="button-container">
         <Image src="/logo4.png"  className="logo" height="200" width="200" alt="Logo " />
         <div className="nav-buttons">
-          <Link href="/homeCard" className="nav-button">Home</Link>
+          <Link href='/' className="nav-button">Home</Link>
           <Link href="/homebody" className="nav-button">Services</Link>
           <Link href="/footer" className="nav-button">Contact</Link>
-          <Link href="/profile" className="nav-button">About</Link>
+          <Link href="/gallary" className="nav-button">About</Link>
         </div>
         <button className="login-button" onClick={handleLoginButtonClick}>
           <Image src="/login 3.png" alt="Login" width="50" height="30" />
@@ -33,7 +33,7 @@ export default function Header() {
         throw new Error("Function not implemented.");
       } } />}
    
-      <Image className="image"   height="950" width="950" src="/dark1.jpg" alt="" />
+      <Image className="image"   height="950" width="950" src="/BG1.png" alt="" />
     </div>
   );
 };
