@@ -1,40 +1,56 @@
-// components/Login.tsx
+// components/LoginPopup.js
 'use client'
-import React, { useState } from 'react';
+import { useState } from 'react';
 import ProfilePopup from '../loginprofile/page';
-import { ProfileData } from '../loginprofile/profilecom';
+import users, { UserData } from './data';
 
-interface LoginProps {
+interface LoginPopupProps {
   setShowPopup: React.Dispatch<React.SetStateAction<boolean>>;
-  setProfileData: React.Dispatch<React.SetStateAction<ProfileData | null>>;
+  handleLoginSuccess: (user: UserData) => void; // Add handleLoginSuccess prop
 }
 
-const Login: React.FC<LoginProps> = ({ setShowPopup, setProfileData }) => {
+const LoginPopup: React.FC<LoginPopupProps> = ({ setShowPopup, handleLoginSuccess }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [loggedIn, setLoggedIn] = useState(false);
+  const [loginError, setLoginError] = useState('');
 
   const handleLogin = () => {
-    // Add your login logic here
-    console.log('Logging in with:', { username, password });
+    const user: UserData | undefined = users.find(
+      (u) => u.username === username && u.password === password
+    );
 
-    // For demonstration purposes, let's assume a successful login
-    // Replace this with your actual login logic
-    const successfulLogin = true;
-
-    if (successfulLogin) {
+    if (user) {
+      // Successful login
+      console.log('Login successful for user:', user);
       setLoggedIn(true);
-
+      setLoginError('');
+      handleLoginSuccess(user); // Call handleLoginSuccess with the user object
+    } else {
+      // Failed login
+      setLoginError('Invalid username or password. Please try again.');
     }
+  };
+
+  const handleLogout = () => {
+    setLoggedIn(false);
+    setUsername('');
+    setPassword('');
   };
 
   return (
     <div className="profilepopup">
       <div className="profilepopup-content">
         {loggedIn ? (
-          <ProfilePopup username={username} setShowPopup={setShowPopup} password={''} setProfileData={function (value: React.SetStateAction<string | ProfileData>): void {
-            throw new Error('Function not implemented.');
-          } } />
+          <ProfilePopup
+            username={username}
+            setShowPopup={setShowPopup}
+            password={''}
+            setProfileData={(value) => {
+              // Add any logic for setting profile data if needed
+              console.log('Setting profile data:', value);
+            }}
+          />
         ) : (
           <>
             <div className="left-half">
@@ -54,6 +70,7 @@ const Login: React.FC<LoginProps> = ({ setShowPopup, setProfileData }) => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
                 <br />
+                {loginError && <p className="error-message">{loginError}</p>}
                 <button type="button" onClick={handleLogin}>
                   Login
                 </button>
@@ -78,4 +95,4 @@ const Login: React.FC<LoginProps> = ({ setShowPopup, setProfileData }) => {
   );
 };
 
-export default Login;
+export default LoginPopup;

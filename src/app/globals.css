@@ -66,7 +66,6 @@ body{
 .login-button {
   display: flex;
   align-items: center;
-  text-decoration: none;
   color: #333;
   padding: 10px;
 }
@@ -968,6 +967,19 @@ font-size: 50px;
   background-color: rgba(0, 0, 0, 0.5);
   z-index: 1;
 }
+/* Add this CSS to your stylesheets or component styles */
+.login-icon-background {
+  width: 30px; /* Adjust the width and height based on your design */
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color:  #059669; /* Set your desired background color */
+  color: #fff; /* Set the text color to contrast with the background */
+  font-size: 14px; /* Adjust the font size as needed */
+  font-weight: bold;
+}
 
 .profilepopup-content {
   display: flex;
@@ -1338,3 +1350,258 @@ iframe {
 height: 24px;
 width: 24px;
 }
+/* styles.css restaurant-list */
+
+.restaurant-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.restaurant-button {
+  background-color: #4caf50;
+  color: white;
+  padding: 10px 15px;
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.restaurant-list {
+  list-style: none;
+  padding: 0;
+}
+
+.restaurant-list-item {
+  background-color: #f8f8f8;
+  padding: 10px;
+  margin-bottom: 5px;
+  cursor: pointer;
+}
+
+.selected-restaurant-details {
+  margin-top: 20px;
+}
+
+.selected-restaurant-image {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+}
+/* styles/Food Deals.module.css */
+/* styles/styles.module.css */
+.fooddeal-container {
+  max-width: auto;
+  margin: 10px auto;
+  padding: 20px;
+  border: 2px solid transparent;/* Border color can be adjusted */
+  box-shadow: 0 0 10px rgba(43, 42, 42, 0.1); /* Shadow color and intensity can be adjusted */
+}
+.fooddeal-container h1 {
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  border: 2px solid transparent;/* Border color can be adjusted */
+  box-shadow: 0 0 10px rgba(43, 42, 42, 0.1);
+}
+.fooddeal-container p {
+  text-align: center;
+  font-size: larger;
+  font-weight: bolder;
+  color: #34b48c;
+  margin-bottom: 20px;
+  padding: 10px;
+}
+
+.fooddeal-categories {
+  display: flex;
+  flex: 1;
+  justify-content: space-between;
+  
+}
+.fooddeal-category h2 {
+  font-size: 24px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  text-decoration: underline; /* Add underline */
+}
+
+.fooddeal-category p {
+  margin-bottom: 15px;
+  font-size: larger;
+  font-weight: bolder;
+  color: #34b48c; 
+  margin-right: 80px;
+}
+
+.fooddeal-items {
+  list-style: none;
+  padding: 10;
+}
+
+
+.fooddeal-items button {
+  list-style: none;
+  padding: 10;
+  background-color:white;
+  margin-left: 15px;
+  border-color: #e5ebe9;
+  font-size: 15px;
+}
+
+.fooddeal-items li {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+
+.fooddeal-items li img {
+  margin-right: 10px;
+}
+.fooddeal-order {
+  flex: 1;
+  text-align: center;
+
+}
+
+.fooddeal-order h2 {
+  font-size: 24px;
+  margin-bottom: 10px;
+  padding: 10px;
+  border: 3px solid transparent;/* Border color can be adjusted */
+  box-shadow: 0 0 20px rgba(19, 18, 18, 0.1);
+}
+
+.fooddeal-order ul {
+  list-style: none;
+  padding: 0;
+}
+
+.fooddeal-order li {
+  margin-bottom: 15px;
+}
+
+.fooddeal-totalPrice {
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.fooddeal-placeOrderBtn {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.fooddeal-placeOrderBtn:hover {
+  background-color: #45a049;
+}
+/* components/PaymentPopup.css */
+
+.payment-popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border: 1px solid #ddd;
+  padding: 20px;
+  max-width: 400px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.payment-popup-content {
+  text-align: center;
+}
+.payment-popup-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Adjust z-index to make sure it's above other content */
+}
+
+.payment-close-popup {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+  padding: 5px 5px;
+  border-radius: 4px;
+  cursor: pointer;
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+}
+
+.payment-close-popup:hover {
+  color: #333;
+  background-color:#e60000 ;
+}
+
+/* You can add more styles for paragraphs, buttons, etc. based on your design */
+/* pages/cart.css */
+.cart-container {
+  padding: 60px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  margin: 10px;
+  text-align: center;
+}
+.cart-content {
+  max-width: 600px;
+  max-height: 300px;
+}
+
+.cart-container h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #45a049;
+  display: inline-block;
+}
+
+.cart-container ul {
+  list-style: none;
+  padding: 0;
+}
+
+.cart-container li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.cart-container li img {
+  margin-right: 10px;
+  border-radius: 4px;
+}
+
+.cart-container button {
+  background-color: #ff4d4d;
+  color: #fff;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-right: 20px;
+}
+
+.cart-container button:hover {
+  background-color: #e60000;
+}
+
+.cart-container p {
+  margin-top: 20px;
+  font-size: 18px;
+}
+
+/* You can add more styles for links, modals, etc. based on your design */
+
