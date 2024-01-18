@@ -1,8 +1,8 @@
 // data.js
 
 export const cities = [
-    { id: 1, name: 'isb' },
-    { id: 2, name: 'rwp' },
+    { id: 1, name: 'Islamabad' },
+    { id: 2, name: 'Rawalpindi' },
     // Add more cities as needed
   ];
   

@@ -81,7 +81,7 @@ const ParallelDivs: React.FC = () => {
   };
 
   return (
-    <>
+    <div className="recipeNote">
       <h2>Recipe NoteBook</h2>
       <div className="container">
         <div className="pink-div">
@@ -144,9 +144,7 @@ const ParallelDivs: React.FC = () => {
               onClick={() => setSelectedDataIndex(index)}
             >
               <div className="black-div-item-name">Name: {recipe.name}</div>
-              <div className="black-div-item-des">
-                Description: {recipe.description}
-              </div>
+    
               <div className="black-div-item-ingredients">
                 Ingredients:
                 <ul>
@@ -154,6 +152,9 @@ const ParallelDivs: React.FC = () => {
                     <li key={i}>{ingredient.trim()}</li>
                   ))}
                 </ul>
+              </div>
+              <div className="black-div-item-des">
+                Description: {recipe.description}
               </div>
               <Image
                 src={recipe.imageURL}
@@ -180,7 +181,7 @@ const ParallelDivs: React.FC = () => {
           ))}
         </div>
       </div>
-    </>
+      </div>
   );
 };
 

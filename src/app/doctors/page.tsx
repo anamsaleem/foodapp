@@ -3,46 +3,9 @@
 import React, { useEffect, useState } from "react";
 import DocItem from "./file";
 import Image from "next/image";
-import Link from "next/link";
+import items from "./data";
 
-const items = [
-  {
-    docname: "Balanced-Bite",
-    image: "/doc1.jpg", // Replace with the actual image path
-    fees: 19.99,
-    description: "Description for Item 1 ",
-    contact: "123-456-7890", // Add contact information to the doctor data
-  },
-  {
-    docname: "PurePalatePro",
-    image: "/doc2.jpg", // Replace with the actual image path
-    fees: 29.99,
-    contact: "123-456-7890", // Add contact information to the doctor data
-    description:
-      "Description for Item 2Description for Item 2Description for Item 2Description for Item 2Description for Item 2Description for Item 2Description for Item 2Description for Item 2Description for Item 2Description for Item 2Description for Item 2Description for Item 2Description for Item 2vDescription for Item 2Description for Item 2 ",
-  },
-  {
-    docname: "Culinary-Counselor",
-    image:"/doc3.jpg", // Replace with the actual image path
-    fees: 40.99,
-    description: "Description for Item 3",
-    contact: "123-456-7890", // Add contact information to the doctor data
-  },
-  {
-    docname: "NutriNinja",
-    image: "/doc4.jpg", // Replace with the actual image path
-    fees: 45.99,
-    description: "Description for Item 3",
-    contact: "123-456-7890", // Add contact information to the doctor data
-  },
-  {
-    docname: "HealthHarmony",
-    image: "/doc5.jpg", // Replace with the actual image path
-    fees: 40.99,
-    description: "Description for Item 3",
-    contact: "123-456-7890", // Add contact information to the doctor data
-  },
-];
+
 
 interface DocItemData {
     docname: string;
@@ -77,6 +40,7 @@ interface DocItemData {
   
     return (
       <div className="doctor-containerItem">
+        <h1>Available Dietitian</h1>
         {items.map((item, index) => (
           <div key={index} className="doctor-columnItem">
             <DocItem {...item} onSelect={() => handleSelect(item)} />

@@ -11,14 +11,11 @@ export default function MainHome() {
   return (
     <>
     <div>
-      
-    <HeadBoady/>
     <HomeCard/>
     <Recipe/>
     <GalleryPage/>
     </div>
-    <div><Footer/></div>
-
+    <div></div>
    </>
   )
 }
